@@ -15,6 +15,25 @@
 				"kind": "build",
 				"isDefault": true
 			}
+		},
+		{
+			"type": "shell",
+			"command": "mvn compile",
+			"label": "compile",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"type": "shell",
+			"command": "cd ./desktop; & mvnDebug exec:java",
+			"label": "debugmvn",
+			"isBackground": true,
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
 		}
 	]
 }

@@ -6,16 +6,30 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MyGameDesktop",
+            "request": "launch",
+            "mainClass": "com.mytest.java.MyGameDesktop",
+            "projectName": "demo",
+            "classPaths": ["${workspaceFolder}\\desktop\\target\\classes"],
+            
+            "shortenCommandLine": "none"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
         },
         {
             "type": "java",
-            "name": "Launch App",
-            "request": "launch",
-            "mainClass": "com.example.App",
-            "projectName": "demo"
+            
+            "name": "Launch DEBUG File",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": 8000,
+            "preLaunchTask": "debugmvn",
+            "mainClass": "${file}"
         }
+
     ]
 }
